@@ -1,7 +1,13 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
 import Plot from 'react-plotly.js'
-
+import  * as d3 from 'd3'
+import data from 'https://raw.githubusercontent.com/plotly/datasets/master/2010_alcohol_consumption_by_country.csv';
+d3.csv(data, function(err, rows){
+function unpack(rows, key) {
+  return rows.map(function(row) { return row[key]; });
+}
+});
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -19,7 +25,7 @@ const GraphBox = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <h3>Prueba1</h3>
+      <h3>Plotly charts</h3>
       <div className={classes.container}>
         <div className={classes.itemFlexGrow}>
           <div className={classes.root}>
@@ -36,7 +42,7 @@ const GraphBox = () => {
               },
               { type: 'bar', x: [1, 2, 3], y: [2, 5, 3] },
             ]}
-            layout={{ width: 320, height: 240, title: 'A Fancy Plot' }}
+            layout={{ width: 320, height: 240, title: 'Fancy Plot' }}
           />
         </div>
         <div className={classes.itemFlexGrow}>
@@ -97,21 +103,24 @@ const GraphBox = () => {
         <div className={classes.itemFlexGrow}>
           <div className={classes.root}>
             <h3>Pie Chart</h3>
-          </div>
-          <Plot
-            data={[{
-              values: [19, 26, 55],
-              labels: ['Residential', 'Non-Residential', 'Utility'],
-              type: 'pie'
-            }]}
-            layout={{
-              height: 400,
-              width: 500
-            }
-            }
-
-          />
-          );
+            </div>
+    <Plot data = {[{
+        type: 'choropleth',
+        locationmode: 'country names',
+        locations: unpack(rows, 'location'),
+        z: unpack(rows, 'alcohol'),
+        text: unpack(rows, 'location'),
+        autocolorscale: true
+    }]}
+      layout = {{
+      title: 'Pure alcohol consumption<br>among adults (age 15+) in 2010',
+      geo: {
+          projection: {
+              type: 'robinson'
+          }
+      }
+    } 
+  } />
         </div>
       </div>
       <div className={classes.container}>
