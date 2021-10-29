@@ -7,8 +7,10 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import SearchAppBar from './Components/MenuBar';
 const App = () => {
   return (
+    <div>
   <Router>
   <div>
     <nav>
@@ -39,6 +41,7 @@ const App = () => {
     </Switch>
   </div>
 </Router>
+</div>
   );
 }
 
