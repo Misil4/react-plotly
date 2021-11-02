@@ -1,31 +1,16 @@
 import './App.css';
 import React from 'react';
+import { Button,Box,Grid } from '@material-ui/core';
+import MenuBar from './Components/MenuBar';
+import {Switch,Route,BrowserRouter as Router,Link} from 'react-router-dom';
 import GraphBox from './Components/graphBox';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import SearchAppBar from './Components/MenuBar';
+import Home from './Components/Home';
+
 const App = () => {
   return (
-    <div>
   <Router>
+    <MenuBar title="CHART COMPILATION" />
   <div>
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/Plotly">Plotly</Link>
-        </li>
-        <li>
-          <Link to="/users">Users</Link>
-        </li>
-      </ul>
-    </nav>
 
     {/* A <Switch> looks through its children <Route>s and
         renders the first one that matches the current URL. */}
@@ -37,11 +22,11 @@ const App = () => {
       <GraphBox />
       </Route>
       <Route path="/">
+        <Home />
       </Route>
     </Switch>
   </div>
 </Router>
-</div>
   );
 }
 

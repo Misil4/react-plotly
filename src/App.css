@@ -45,3 +45,10 @@
   width: 50;
   border: 2 solid black;
 }
+.box {
+  width: 700px;
+  margin: 320px auto 0px 400px;
+}
+nav {
+  text-align: center;
+}

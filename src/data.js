@@ -1,0 +1,1 @@
+export const images = ["https://cms-assets.tutsplus.com/uploads/users/1251/posts/29029/preview_image/plotlytutsplus.png","https://www.ecured.cu/images/thumb/9/97/Highcharts2.jpg/260px-Highcharts2.jpg","https://miro.medium.com/max/1000/1*IBdjvYZNMl-pPoW8FyPLNg.png"]

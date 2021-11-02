@@ -1,111 +1,34 @@
-import React, { useState } from "react";
-import '../App.css'
-import {
-  AppBar,
-  Toolbar,
-  Avatar,
-  Box,
-  Divider,
-  IconButton,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  CssBaseline,
-  Drawer,
-  Typography
-} from "@material-ui/core";
-import {
-  Apps,
-  Menu,
-  ContactMail,
-  AssignmentInd,
-  Home
-} from "@material-ui/icons";
-import { makeStyles } from "@mui/styles";
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
 
-const useStyles = makeStyles((theme) => ({
-  menuSliderContainer: {
-    width: 250,
-    background: "#511",
-    height: "100%"
-  },
-  avatar: {
-    margin: "0.5rem auto",
-    padding: "1rem",
-    width: theme.spacing(13),
-    height: theme.spacing(13)
-  },
-  listItem: {
-    color: "tan"
-  }
-}));
-
-const listItems = [
-  {
-    listIcon: <Home />,
-    listText: "Home"
-  },
-  {
-    listIcon: <AssignmentInd />,
-    listText: "Resume"
-  },
-  {
-    listIcon: <Apps />,
-    listText: "Portfolio"
-  },
-  {
-    listIcon: <ContactMail />,
-    listText: "Contacts"
-  }
-];
-
-export default function App() {
-  const classes = useStyles();
-  const [open, setOpen] = useState(false);
-
-  const toggleSlider = () => {
-    setOpen(!open);
-  };
-
-  const sideList = () => (
-    <Box className={classes.menuSliderContainer} component="div">
-      <Avatar
-        className={classes.avatar}
-        src="https://i.ibb.co/rx5DFbs/avatar.png"
-        alt="Juaneme8"
-      />
-      <Divider />
-      <List>
-        {listItems.map((listItem, index) => (
-          <ListItem className={classes.listItem} button key={index}>
-            <ListItemIcon className={classes.listItem}>
-              {listItem.listIcon}
-            </ListItemIcon>
-            <ListItemText primary={listItem.listText} />
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
-
+export default function MenuBar(props) {
   return (
-    <div>
-      <CssBaseline />
-
-      <Box component="nav">
-        <AppBar position="static">
-          <Toolbar>
-            <IconButton onClick={toggleSlider}>
-              <Menu />
-            </IconButton>
-            <Typography>Portfolio</Typography>
-            <Drawer open={open} anchor="right" onClose={toggleSlider}>
-              {sideList()}
-            </Drawer>
-          </Toolbar>
-        </AppBar>
-      </Box>
-    </div>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static" style={{background : "orange"}}>
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          </Typography>
+          <Button variant="contained" color="success"> <a style={{ textDecoration: "none",color:"white" }} href="/">Inicio</a></Button>
+          <Button variant="contained" color="error"><a style={{ textDecoration: "none",color:"white" }} href="/Plotly">Plotly</a></Button>
+          <Button variant="contained" color="primary"> <a style={{ textDecoration: "none",color:"white" }} href="/users">HightCharts</a> </Button>
+          <Button variant="contained" color="secondary"><a style={{ textDecoration: "none",color:"white" }} href="/users">React-Charts2</a></Button>
+        </Toolbar>
+      </AppBar>
+    </Box>
   );
 }
