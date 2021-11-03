@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
-export default function MenuBar(props) {
+export default function MenuBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" style={{background : "orange"}}>
@@ -25,7 +25,7 @@ export default function MenuBar(props) {
           </Typography>
           <Button variant="contained" color="success"> <a style={{ textDecoration: "none",color:"white" }} href="/">Inicio</a></Button>
           <Button variant="contained" color="error"><a style={{ textDecoration: "none",color:"white" }} href="/Plotly">Plotly</a></Button>
-          <Button variant="contained" color="primary"> <a style={{ textDecoration: "none",color:"white" }} href="/users">HightCharts</a> </Button>
+          <Button variant="contained" color="primary"> <a style={{ textDecoration: "none",color:"white" }} href="/Highchart">HightCharts</a> </Button>
           <Button variant="contained" color="secondary"><a style={{ textDecoration: "none",color:"white" }} href="/users">React-Charts2</a></Button>
         </Toolbar>
       </AppBar>

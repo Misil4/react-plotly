@@ -1,10 +1,10 @@
 import './App.css';
 import React from 'react';
-import { Button,Box,Grid } from '@material-ui/core';
 import MenuBar from './Components/MenuBar';
-import {Switch,Route,BrowserRouter as Router,Link} from 'react-router-dom';
-import GraphBox from './Components/graphBox';
+import {Switch,Route,BrowserRouter as Router} from 'react-router-dom';
 import Home from './Components/Home';
+import Plotly from './Components/Plotly';
+import Highchart from './Components/Highchart';
 
 const App = () => {
   return (
@@ -16,10 +16,10 @@ const App = () => {
         renders the first one that matches the current URL. */}
     <Switch>
       <Route path="/Plotly">
-      <GraphBox />
+      <Plotly />
       </Route>
-      <Route path="/users">
-      <GraphBox />
+      <Route path="/Highchart">
+      <Highchart />
       </Route>
       <Route path="/">
         <Home />
