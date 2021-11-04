@@ -10,8 +10,8 @@ const Plotly = () => {
   }, 1000);
   return (
     <div>
-      {console.log(valor)}
-      <Grid style={{ margin: "100px auto" }} container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+      <Typography component="div" variant="h6">Los ejemplos mostrados a continuacion se actualizan automaticanmente hasta alcanzar el valor 20</Typography>
+      <Grid style={{ margin: "auto 100px" }} container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={6}>
           <Typography component="div" variant="h4">Fancy Plot</Typography>
           <Plot
