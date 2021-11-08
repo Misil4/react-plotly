@@ -7,7 +7,11 @@ import mapDataIE from "@highcharts/map-collection/countries/es/es-all.geo.json";
 import React, { useState } from 'react';
 import { Grid } from '@mui/material';
 import useInterval from '../Hooks/useInterval';
-import {options,mapOptions} from '../ChartOptions';
+import highchartsMore from "highcharts/highcharts-more.js"
+import solidGauge from "highcharts/modules/solid-gauge.js";
+import { options, mapOptions, multiChartsConfig, gaugeOptions } from '../ChartOptions';
+highchartsMore(Highcharts);
+solidGauge(Highcharts);
 highchartsMap(Highcharts);
 const Highchart = () => {
   if (typeof window !== "undefined") {
@@ -36,9 +40,14 @@ const Highchart = () => {
       </Grid>
       <Grid item xs={6}>
         3
+        <HighchartsReact
+          highcharts={Highcharts}
+          options={multiChartsConfig(460, 60, 40, 10, 'Total', 'Sent')} />
       </Grid>
       <Grid item xs={6}>
-        4
+        <HighchartsReact
+          highcharts={Highcharts}
+          options={gaugeOptions} />
       </Grid>
     </Grid>
   )

@@ -5,6 +5,7 @@ import {Switch,Route,BrowserRouter as Router} from 'react-router-dom';
 import Home from './Components/Home';
 import Plotly from './Components/Plotly';
 import Highchart from './Components/Highchart';
+import Chart2 from './Components/React-charts2';
 
 const App = () => {
   return (
@@ -20,6 +21,9 @@ const App = () => {
       </Route>
       <Route path="/Highchart">
       <Highchart />
+      </Route>
+      <Route path="/React-charts2">
+      <Chart2 />
       </Route>
       <Route path="/">
         <Home />
