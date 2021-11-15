@@ -9,7 +9,7 @@ import { Grid } from '@mui/material';
 import useInterval from '../Hooks/useInterval';
 import highchartsMore from "highcharts/highcharts-more.js"
 import solidGauge from "highcharts/modules/solid-gauge.js";
-import { options, mapOptions, multiChartsConfig, gaugeOptions } from '../ChartOptions';
+import { options, mapOptions, multiChartsConfig, gaugeOptions } from './HighChartOptions';
 highchartsMore(Highcharts);
 solidGauge(Highcharts);
 highchartsMap(Highcharts);

@@ -31,10 +31,6 @@ const Home = () =>  {
          Esta aplicacion esta creada para mostrar ejemplos de varias librerias de graficos JS adaptados a React
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
     </Card>
         </Box>
     )

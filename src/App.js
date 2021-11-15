@@ -4,8 +4,8 @@ import MenuBar from './Components/MenuBar';
 import {Switch,Route,BrowserRouter as Router} from 'react-router-dom';
 import Home from './Components/Home';
 import Plotly from './Components/Plotly';
-import Highchart from './Components/Highchart';
-import Chart2 from './Components/React-charts2';
+import Highchart from './Components/highchart';
+import Recharts from './Components/Recharts';
 
 const App = () => {
   return (
@@ -13,8 +13,6 @@ const App = () => {
     <MenuBar title="CHART COMPILATION" />
   <div>
 
-    {/* A <Switch> looks through its children <Route>s and
-        renders the first one that matches the current URL. */}
     <Switch>
       <Route path="/Plotly">
       <Plotly />
@@ -22,8 +20,8 @@ const App = () => {
       <Route path="/Highchart">
       <Highchart />
       </Route>
-      <Route path="/React-charts2">
-      <Chart2 />
+      <Route path="/Recharts">
+      <Recharts />
       </Route>
       <Route path="/">
         <Home />
