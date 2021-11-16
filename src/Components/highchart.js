@@ -3,13 +3,12 @@ import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 import highchartsMap from "highcharts/modules/map";
 import proj4 from "proj4";
-import mapDataIE from "@highcharts/map-collection/countries/es/es-all.geo.json";
 import React, { useState } from 'react';
-import { Grid } from '@mui/material';
+import { Grid,Typography } from '@mui/material';
 import useInterval from '../Hooks/useInterval';
 import highchartsMore from "highcharts/highcharts-more.js"
 import solidGauge from "highcharts/modules/solid-gauge.js";
-import { options, mapOptions, multiChartsConfig, gaugeOptions } from './HighChartOptions';
+import { options, mapOptions, multiChartsConfig, gaugeOptions } from './highchart/HighChartOptions';
 highchartsMore(Highcharts);
 solidGauge(Highcharts);
 highchartsMap(Highcharts);
@@ -23,8 +22,9 @@ const Highchart = () => {
   }, 1000);
 
   return (
-    <Grid style={{ margin: "100px auto" }} container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+    <Grid style={{ margin: "100px auto",textAlign : "center" }} container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
       <Grid item xs={6}>
+      <Typography component="div" variant="h4"> PieChart</Typography>
         <HighchartsReact
           highcharts={Highcharts}
           options={options}
@@ -32,6 +32,7 @@ const Highchart = () => {
         {/* <Button style={{marginLeft : '250px'}}variant="contained" onClick={() => Setvalor(valor => [...valor, Math.floor(Math.random() * (100 - 0)) + 0])}>Añadir dato</Button> */}
       </Grid>
       <Grid item xs={6}>
+      <Typography component="div" variant="h4"> MapChart</Typography>
         <HighchartsReact
           constructorType={'mapChart'}
           highcharts={Highcharts}
@@ -39,12 +40,13 @@ const Highchart = () => {
         />
       </Grid>
       <Grid item xs={6}>
-        3
+      <Typography component="div" variant="h4"> RadialChart</Typography>
         <HighchartsReact
           highcharts={Highcharts}
           options={multiChartsConfig(460, 60, 40, 10, 'Total', 'Sent')} />
       </Grid>
       <Grid item xs={6}>
+      <Typography component="div" variant="h4"> GaugeChart</Typography>
         <HighchartsReact
           highcharts={Highcharts}
           options={gaugeOptions} />

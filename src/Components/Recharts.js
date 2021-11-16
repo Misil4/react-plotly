@@ -24,12 +24,12 @@ const Recharts = () => {
   useInterval(() => {
     lineData.length === 20 ? null : SetLineData((prevState) => [...prevState, {uv :Math.floor(Math.random() * (999 - 0)) +0}])
     areaData.length === 20 ? null : SetAreaData((prevState) => [...prevState, {students :Math.floor(Math.random() * (50 - 0)) +0}]);
-    pieData.length === 20 ? null : SetPieData((prevState) => [...prevState, {name : "GROUP C",value :Math.floor(Math.random() * (999 - 0)) +0,fill :colorArray[Math.floor(Math.random() * (50 - 0)) +0]}])
-    radialData.length === 20 ? null : SetRadialData((prevState) => [...prevState, {name : counter++,uv: Math.floor(Math.random() * (999 - 0)) +0,pv: 2400,fill: colorArray[Math.floor(Math.random() * (50 - 0)) +0] }])
+    pieData.length === 10 ? null : SetPieData((prevState) => [...prevState, {name : "GROUP C",value :Math.floor(Math.random() * (999 - 0)) +0,fill :colorArray[Math.floor(Math.random() * (50 - 0)) +0]}])
+    radialData.length === 10 ? null : SetRadialData((prevState) => [...prevState, {name : counter++,uv: Math.floor(Math.random() * (999 - 0)) +0,pv: 2400,fill: colorArray[Math.floor(Math.random() * (50 - 0)) +0] }])
   }, 1000);
   return (
     <div>
-      <Grid style={{textAlign : "center"}} container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+      <Grid style={{margin: "100px auto",textAlign : "center"}} container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
   <Grid item xs={6}>
   <Typography component="div" variant="h4"> Linechart</Typography>
   <MyLinechart lineData={lineData} />
@@ -39,9 +39,11 @@ const Recharts = () => {
   <MyAreachart areaData={areaData} />
   </Grid>
   <Grid item xs={6}>
+  <Typography component="div" variant="h4"> PieChart</Typography>
     <MyPiechart data={pieData} />
   </Grid>
   <Grid item xs={6}>
+  <Typography component="div" variant="h4"> RadialChart</Typography>
     <MyRadialChart data={radialData} />
   </Grid>
 </Grid>

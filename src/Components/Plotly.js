@@ -5,6 +5,7 @@ import Plot from 'react-plotly.js'
 import MyScatter from "./plotly/scatter";
 import MyIndicator from "./plotly/indicator";
 import MyPie from "./plotly/pie";
+import MyBar from "./plotly/bar";
 
 const Plotly = () => {
   const [valor, SetValor] = useState(0);
@@ -25,10 +26,11 @@ const Plotly = () => {
         </Grid>
         <Grid item xs={6}>
           <Typography component="div" variant="h4">Pie Chart</Typography>
+          <MyPie value={valor} />
         </Grid>
         <Grid item xs={6}>
           <Typography component="div" variant="h4">Bar Chart</Typography>
-          <MyPie value={valor} />
+          <MyBar value={valor} />
         </Grid>
       </Grid>
     </div>

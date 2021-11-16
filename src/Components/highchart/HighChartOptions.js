@@ -5,7 +5,7 @@ export const mapOptions = {
       map: 'countries/es/es-all'
     },
     title: {
-      text: 'Map Demo'
+      text: 'Spain Map'
     },
     credits: {
       enabled: false
@@ -50,10 +50,7 @@ export const mapOptions = {
       }
     },
     title: {
-      text: 'Contents of Highsoft\'s weekly fruit delivery'
-    },
-    subtitle: {
-      text: '3D donut in Highcharts'
+      text: 'Fruits '
     },
     plotOptions: {
       pie: {

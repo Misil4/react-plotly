@@ -4,7 +4,7 @@ import MenuBar from './Components/MenuBar';
 import {Switch,Route,BrowserRouter as Router} from 'react-router-dom';
 import Home from './Components/Home';
 import Plotly from './Components/Plotly';
-import Highchart from './Components/highchart';
+import Highchart from './Components/Highchart';
 import Recharts from './Components/Recharts';
 
 const App = () => {
