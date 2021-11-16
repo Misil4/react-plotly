@@ -1,4 +1,4 @@
-import { Box,Card,CardContent,CardActions,ImageList,ImageListItem,Typography,Button } from "@mui/material"
+import { Box,Card,CardContent,ImageList,ImageListItem,Typography } from "@mui/material"
 import React from "react";
 const {images} = require('../data');
 console.log(images)
