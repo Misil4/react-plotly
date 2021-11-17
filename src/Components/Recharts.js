@@ -22,10 +22,10 @@ const Recharts = () => {
   const [pieData,SetPieData] = useState([{name : "GROUP C",value: 400,fill: "#8884d8"}]);
   const [radialData,SetRadialData] = useState([{name: counter,uv: 31.47,pv: 2400,fill: colorArray[Math.floor(Math.random() * (50 - 0)) +0] }])
   useInterval(() => {
-    lineData.length === 20 ? null : SetLineData((prevState) => [...prevState, {uv :Math.floor(Math.random() * (999 - 0)) +0}])
-    areaData.length === 20 ? null : SetAreaData((prevState) => [...prevState, {students :Math.floor(Math.random() * (50 - 0)) +0}]);
-    pieData.length === 10 ? null : SetPieData((prevState) => [...prevState, {name : "GROUP C",value :Math.floor(Math.random() * (999 - 0)) +0,fill :colorArray[Math.floor(Math.random() * (50 - 0)) +0]}])
-    radialData.length === 10 ? null : SetRadialData((prevState) => [...prevState, {name : counter++,uv: Math.floor(Math.random() * (999 - 0)) +0,pv: 2400,fill: colorArray[Math.floor(Math.random() * (50 - 0)) +0] }])
+    if (lineData.length !== 20) SetLineData((prevState) => [...prevState, {uv :Math.floor(Math.random() * (999 - 0)) +0}])
+    if (areaData.length !== 20) SetAreaData((prevState) => [...prevState, {students :Math.floor(Math.random() * (50 - 0)) +0}]);
+    if (pieData.length !== 10) SetPieData((prevState) => [...prevState, {name : "GROUP C",value :Math.floor(Math.random() * (999 - 0)) +0,fill :colorArray[Math.floor(Math.random() * (50 - 0)) +0]}])
+    if (radialData.length !== 10) SetRadialData((prevState) => [...prevState, {name : counter++,uv: Math.floor(Math.random() * (999 - 0)) +0,pv: 2400,fill: colorArray[Math.floor(Math.random() * (50 - 0)) +0] }])
   }, 1000);
   return (
     <div>

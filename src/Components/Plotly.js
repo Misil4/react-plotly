@@ -10,7 +10,7 @@ import MyBar from "./plotly/bar";
 const Plotly = () => {
   const [valor, SetValor] = useState(0);
   useInterval(() => {
-    valor === 20 ? null : SetValor(valor + 1)
+    if (valor !== 20) SetValor(valor + 1)
   }, 1000);
   return (
     <div>

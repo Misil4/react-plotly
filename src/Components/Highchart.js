@@ -18,7 +18,7 @@ const Highchart = () => {
   }
   const [valor, Setvalor] = useState(0)
   useInterval(() => {
-    valor === 20 ? null : Setvalor(valor + 1)
+    if (valor !==20 ) Setvalor(valor + 1)
   }, 1000);
 
   return (
