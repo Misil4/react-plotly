@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/react-plotly/precache-manifest.ebc5b0dda321ffd809b32f5bb0098de1.js"
+  "/react-plotly/precache-manifest.d7182d5bf8b07ba8b786c16c0dd71d0d.js"
 );
 
 workbox.clientsClaim();
