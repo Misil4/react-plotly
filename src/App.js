@@ -23,7 +23,7 @@ const App = () => {
       <Route path="/react-plotly/Recharts">
       <Recharts />
       </Route>
-      <Route path="/">
+      <Route path="/react-plotly/">
         <Home />
       </Route>
     </Switch>
