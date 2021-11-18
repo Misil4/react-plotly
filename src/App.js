@@ -14,13 +14,13 @@ const App = () => {
   <div>
 
     <Switch>
-      <Route path="/Plotly">
+      <Route path="/react-plotly/Plotly">
       <Plotly />
       </Route>
-      <Route path="/Highchart">
+      <Route path="/react-plotly/Highchart">
       <Highchart />
       </Route>
-      <Route path="/Recharts">
+      <Route path="/react-plotly/Recharts">
       <Recharts />
       </Route>
       <Route path="/">
