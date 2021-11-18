@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { NavLink } from 'react-router-dom';
 
 export default function MenuBar() {
   return (
@@ -12,10 +13,10 @@ export default function MenuBar() {
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           </Typography>
-          <Button variant="contained" color="success"> <a style={{ textDecoration: "none",color:"white" }} href="/">Inicio</a></Button>
-          <Button variant="contained" color="error"><a style={{ textDecoration: "none",color:"white" }} href="/Plotly">Plotly</a></Button>
-          <Button variant="contained" color="primary"> <a style={{ textDecoration: "none",color:"white" }} href="/Highchart">HightCharts</a> </Button>
-          <Button variant="contained" color="secondary"><a style={{ textDecoration: "none",color:"white" }} href="/Recharts">Recharts</a></Button>
+          <Button variant="contained" color="success"> <NavLink style={{ textDecoration: "none",color:"white" }} to="/">Inicio</NavLink></Button>
+          <Button variant="contained" color="error"><NavLink style={{ textDecoration: "none",color:"white" }} to="/Plotly">Plotly</NavLink></Button>
+          <Button variant="contained" color="primary"> <NavLink style={{ textDecoration: "none",color:"white" }} to="/Highchart">HightCharts</NavLink> </Button>
+          <Button variant="contained" color="secondary"><NavLink style={{ textDecoration: "none",color:"white" }} to="/Recharts">Recharts</NavLink></Button>
         </Toolbar>
       </AppBar>
     </Box>
