@@ -1,7 +1,7 @@
 {
   "main.css": "/react-plotly/static/css/main.4379803a.chunk.css",
-  "main.js": "/react-plotly/static/js/main.c3aed455.chunk.js",
-  "main.js.map": "/react-plotly/static/js/main.c3aed455.chunk.js.map",
+  "main.js": "/react-plotly/static/js/main.72d02350.chunk.js",
+  "main.js.map": "/react-plotly/static/js/main.72d02350.chunk.js.map",
   "runtime~main.js": "/react-plotly/static/js/runtime~main.98e8900d.js",
   "runtime~main.js.map": "/react-plotly/static/js/runtime~main.98e8900d.js.map",
   "static/js/2.1cb5385e.chunk.js": "/react-plotly/static/js/2.1cb5385e.chunk.js",
@@ -9,7 +9,7 @@
   "static/js/3.33f1961e.chunk.js": "/react-plotly/static/js/3.33f1961e.chunk.js",
   "static/js/3.33f1961e.chunk.js.map": "/react-plotly/static/js/3.33f1961e.chunk.js.map",
   "index.html": "/react-plotly/index.html",
-  "precache-manifest.3c224edb7c10ef3bc5a4c0a8e4f188d2.js": "/react-plotly/precache-manifest.3c224edb7c10ef3bc5a4c0a8e4f188d2.js",
+  "precache-manifest.7d8e38688e28c7c349a0526be49eaa92.js": "/react-plotly/precache-manifest.7d8e38688e28c7c349a0526be49eaa92.js",
   "service-worker.js": "/react-plotly/service-worker.js",
   "static/css/main.4379803a.chunk.css.map": "/react-plotly/static/css/main.4379803a.chunk.css.map"
 }
