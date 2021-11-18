@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "3af1ecd96d2d6f8fcc04",
+    "revision": "0fb9c8b2facd1625ec3a",
     "url": "/react-plotly/static/css/main.4379803a.chunk.css"
   },
   {
-    "revision": "3af1ecd96d2d6f8fcc04",
-    "url": "/react-plotly/static/js/main.0d90e3f5.chunk.js"
+    "revision": "0fb9c8b2facd1625ec3a",
+    "url": "/react-plotly/static/js/main.990072bb.chunk.js"
   },
   {
     "revision": "68924aa8e5586cbb9818",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/react-plotly/static/js/3.33f1961e.chunk.js"
   },
   {
-    "revision": "32aeabc6064232c12c5c72544aac9c36",
+    "revision": "c641e47eb9b4a74f7f0db897c4ff90e3",
     "url": "/react-plotly/index.html"
   }
 ];
