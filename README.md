@@ -1,6 +1,6 @@
-Proyecto para enseñar ejemplos de diferentes librerias de graficos en React y como se actualizan
+Project to show various React-chart libraries working and updating in real time
 
-De momento hay 3 librerias implementadas : 
+Already implemented 3 Libraries : 
 
 -Plotly.js
 -Recharts
